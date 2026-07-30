@@ -1,0 +1,429 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>echoNad3 — Software Portfolio</title>
+  <meta name="description" content="Software projects by echoNad3: useful, simple, and privacy-conscious.">
+  <meta name="robots" content="index,follow,max-image-preview:large">
+  <meta name="theme-color" content="#34302d">
+  <link rel="canonical" href="https://echonad3.github.io/">
+  <link rel="icon" type="image/png" href="assets/favicon.png">
+
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="echoNad3 — Software Portfolio">
+  <meta property="og:description" content="Useful, simple, and privacy-conscious software projects.">
+  <meta property="og:url" content="https://echonad3.github.io/">
+  <meta property="og:image" content="https://echonad3.github.io/assets/echonad3-logo-original.png">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <style>
+    :root {
+      color-scheme: dark;
+      --background: #34302d;
+      --surface: rgba(52, 48, 45, 0.86);
+      --heading: #f4e6dd;
+      --text: #dfd1c8;
+      --muted: #aa9d95;
+      --divider: rgba(244, 230, 221, 0.18);
+      --grid-major: rgba(244, 230, 221, 0.038);
+      --grid-minor: rgba(244, 230, 221, 0.016);
+      --content-width: 760px;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; }
+
+    html {
+      scroll-behavior: smooth;
+      scrollbar-gutter: stable;
+    }
+
+    body {
+      min-width: 320px;
+      margin: 0;
+      color: var(--text);
+      background-color: var(--background);
+      background-image:
+        linear-gradient(var(--grid-major) 1px, transparent 1px),
+        linear-gradient(90deg, var(--grid-major) 1px, transparent 1px),
+        linear-gradient(var(--grid-minor) 1px, transparent 1px),
+        linear-gradient(90deg, var(--grid-minor) 1px, transparent 1px);
+      background-size: 64px 64px, 64px 64px, 16px 16px, 16px 16px;
+      background-position: -1px -1px;
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      font-size: 16.5px;
+      line-height: 1.7;
+      text-rendering: optimizeLegibility;
+      -webkit-font-smoothing: antialiased;
+      overflow-x: hidden;
+    }
+
+    body::before {
+      content: "";
+      position: fixed;
+      inset: 0;
+      z-index: -1;
+      pointer-events: none;
+      background:
+        linear-gradient(
+          90deg,
+          transparent 0%,
+          rgba(52, 48, 45, 0.38) calc(50% - 500px),
+          rgba(52, 48, 45, 0.78) calc(50% - 390px),
+          rgba(52, 48, 45, 0.90) calc(50% - 280px),
+          rgba(52, 48, 45, 0.90) calc(50% + 280px),
+          rgba(52, 48, 45, 0.78) calc(50% + 390px),
+          rgba(52, 48, 45, 0.38) calc(50% + 500px),
+          transparent 100%
+        );
+    }
+
+    a { color: inherit; }
+    img { display: block; max-width: 100%; }
+    h1, h2, h3, p, ul { margin-top: 0; }
+
+    .shell {
+      width: min(calc(100% - 40px), var(--content-width));
+      margin-inline: auto;
+    }
+
+    .skip-link {
+      position: fixed;
+      top: -64px;
+      left: 16px;
+      z-index: 50;
+      padding: 8px 12px;
+      color: var(--background);
+      background: var(--heading);
+      border-radius: 3px;
+      font-weight: 750;
+      text-decoration: none;
+    }
+
+    .skip-link:focus { top: 16px; }
+
+    header {
+      position: relative;
+      z-index: 1;
+      border-bottom: 1px solid var(--divider);
+    }
+
+    .header-inner {
+      min-height: 76px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+    }
+
+    .brand {
+      width: 142px;
+      text-decoration: none;
+    }
+
+    .brand img {
+      width: 100%;
+      height: auto;
+    }
+
+    .github-link {
+      color: var(--muted);
+      font-size: 0.875rem;
+      font-weight: 700;
+      text-decoration: none;
+      transition: color 140ms ease;
+    }
+
+    .github-link:hover,
+    .github-link:focus-visible { color: var(--heading); }
+
+    main {
+      position: relative;
+      z-index: 1;
+    }
+
+    .section {
+      padding: 64px 0;
+    }
+
+    .section + .section {
+      border-top: 1px solid var(--divider);
+    }
+
+    .eyebrow {
+      margin-bottom: 14px;
+      color: var(--muted);
+      font-size: 0.9rem;
+      font-weight: 650;
+    }
+
+    h1 {
+      max-width: 650px;
+      margin-bottom: 28px;
+      color: var(--heading);
+      font-size: clamp(2.7rem, 7vw, 4.25rem);
+      line-height: 1.02;
+      letter-spacing: -0.05em;
+      font-weight: 790;
+    }
+
+    h2 {
+      margin-bottom: 28px;
+      color: var(--heading);
+      font-size: 1.34rem;
+      line-height: 1.25;
+      letter-spacing: -0.025em;
+      font-weight: 760;
+    }
+
+    h3 {
+      margin: 48px 0 20px;
+      color: var(--heading);
+      font-size: 1.08rem;
+      line-height: 1.3;
+      letter-spacing: -0.015em;
+      font-weight: 740;
+    }
+
+    .copy {
+      max-width: 66ch;
+    }
+
+    p { margin-bottom: 17px; }
+    p:last-child { margin-bottom: 0; }
+
+    .lead {
+      font-size: 1.06rem;
+      line-height: 1.72;
+    }
+
+    strong {
+      color: var(--heading);
+      font-weight: 750;
+    }
+
+    .statement {
+      color: var(--heading);
+      font-weight: 750;
+    }
+
+    .projects {
+      display: grid;
+    }
+
+    .project {
+      display: grid;
+      grid-template-columns: minmax(150px, 0.8fr) minmax(180px, 1fr) auto;
+      gap: 24px;
+      align-items: baseline;
+      padding: 20px 0;
+      text-decoration: none;
+    }
+
+    .project + .project {
+      border-top: 1px solid var(--divider);
+    }
+
+    .project-name {
+      color: var(--heading);
+      font-weight: 750;
+      letter-spacing: -0.015em;
+    }
+
+    .project-type {
+      color: var(--muted);
+      font-size: 0.92rem;
+    }
+
+    .project-action {
+      color: var(--muted);
+      font-size: 0.82rem;
+      font-weight: 700;
+      white-space: nowrap;
+      transition: color 140ms ease;
+    }
+
+    .project:hover .project-name,
+    .project:focus-visible .project-name,
+    .project:hover .project-action,
+    .project:focus-visible .project-action {
+      color: #fffaf7;
+    }
+
+    .principles {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 10px 42px;
+      max-width: 660px;
+      margin: 0 0 30px;
+      padding: 0;
+      list-style: none;
+    }
+
+    .principles li {
+      position: relative;
+      padding-left: 17px;
+      color: var(--heading);
+      font-weight: 650;
+    }
+
+    .principles li::before {
+      content: "";
+      position: absolute;
+      top: 0.78em;
+      left: 0;
+      width: 4px;
+      height: 4px;
+      border-radius: 50%;
+      background: var(--muted);
+      transform: translateY(-50%);
+    }
+
+    footer {
+      position: relative;
+      z-index: 1;
+      display: flex;
+      justify-content: space-between;
+      gap: 24px;
+      padding: 24px 0 32px;
+      border-top: 1px solid var(--divider);
+      color: var(--muted);
+      font-size: 0.82rem;
+    }
+
+    footer a {
+      font-weight: 650;
+      text-decoration: none;
+    }
+
+    footer a:hover,
+    footer a:focus-visible { color: var(--heading); }
+
+    :focus-visible {
+      outline: 2px solid var(--heading);
+      outline-offset: 4px;
+    }
+
+    @media (max-width: 680px) {
+      .section { padding: 52px 0; }
+
+      .project {
+        grid-template-columns: 1fr auto;
+        gap: 4px 18px;
+        align-items: start;
+      }
+
+      .project-type {
+        grid-column: 1 / -1;
+      }
+    }
+
+    @media (max-width: 520px) {
+      body {
+        font-size: 16px;
+        background-size: 56px 56px, 56px 56px, 14px 14px, 14px 14px;
+      }
+
+      body::before {
+        background: rgba(52, 48, 45, 0.78);
+      }
+
+      .shell { width: min(calc(100% - 30px), var(--content-width)); }
+      .header-inner { min-height: 70px; }
+      .brand { width: 128px; }
+      .section { padding: 44px 0; }
+      h1 { font-size: clamp(2.45rem, 13vw, 3.4rem); }
+      .lead { font-size: 1.02rem; }
+      .principles { grid-template-columns: 1fr; gap: 8px; }
+      footer { flex-direction: column; gap: 4px; }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      .github-link,
+      .project-action { transition: none; }
+    }
+  </style>
+</head>
+<body>
+  <a class="skip-link" href="#content">Skip to content</a>
+
+  <header>
+    <div class="header-inner shell">
+      <a class="brand" href="#top" aria-label="echoNad3 home">
+        <img src="assets/echonad3-logo.png" alt="echoNad3 logo">
+      </a>
+      <a class="github-link" href="https://github.com/echoNad3" target="_blank" rel="noreferrer">GitHub ↗</a>
+    </div>
+  </header>
+
+  <main id="content" class="shell">
+    <section class="section" id="top" aria-labelledby="intro-title">
+      <p class="eyebrow">Welcome to the GitHub page of echoNad3</p>
+      <h1 id="intro-title">I make stuff I want to use.</h1>
+
+      <div class="copy">
+        <p class="lead">Most of what I build starts the same way: <strong>I need a tool, I look for one</strong>, and everything I find is either full of ads, locked behind a subscription, collecting more data than it needs, or bloated with features nobody asked for.</p>
+        <p class="statement">So I make my own.</p>
+        <p>That has turned into fitness apps, VS Code extensions, YouTube summarizers, small utilities, automation tools, and a few video game projects.</p>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="projects-title">
+      <h2 id="projects-title">Projects</h2>
+
+      <div class="projects">
+        <a class="project" href="https://github.com/echoNad3/echoTheme" target="_blank" rel="noreferrer">
+          <span class="project-name">echoTheme</span>
+          <span class="project-type">VS Code extension</span>
+          <span class="project-action">View ↗</span>
+        </a>
+
+        <a class="project" href="https://github.com/echoNad3/fitness_hub" target="_blank" rel="noreferrer">
+          <span class="project-name">Fitness Hub</span>
+          <span class="project-type">Fitness app</span>
+          <span class="project-action">View ↗</span>
+        </a>
+
+        <a class="project" href="https://github.com/echoNad3/no_bullshit_summary" target="_blank" rel="noreferrer">
+          <span class="project-name">No BS Summary</span>
+          <span class="project-type">YouTube summarizer</span>
+          <span class="project-action">View ↗</span>
+        </a>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="philosophy-title">
+      <h2 id="philosophy-title">Why</h2>
+
+      <div class="copy">
+        <p>I’m tired of simple software being turned into a service.</p>
+        <p>You install something to do one basic job, and suddenly it wants an account, cloud access, analytics, notifications, a monthly payment, and permission to track half your life.</p>
+        <p>A lot of good software also gets worse over time because the company behind it needs more growth, more engagement, and more ways to squeeze money out of the same users.</p>
+        <p><strong>I don’t want any of that in the things I use.</strong></p>
+      </div>
+
+      <h3>What I aim for</h3>
+
+      <ul class="principles">
+        <li>useful</li>
+        <li>simple</li>
+        <li>private where possible</li>
+        <li>no ads</li>
+        <li>no pointless accounts</li>
+        <li>no subscriptions for basic features</li>
+      </ul>
+
+      <div class="copy">
+        <p>Some projects are public. Some are unfinished. A lot of them are just things I built because I wanted them to exist.</p>
+        <p><strong>That’s pretty much it.</strong></p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="shell">
+    <span>© 2026 echoNad3</span>
+    <a href="https://github.com/echoNad3" target="_blank" rel="noreferrer">github.com/echoNad3</a>
+  </footer>
+</body>
+</html>
