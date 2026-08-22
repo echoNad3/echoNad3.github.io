@@ -10,17 +10,17 @@
   <meta name="theme-color" content="#34302d">
   <link rel="canonical" href="https://echonad3.github.io/">
 
-  <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32x32.png?v=15">
-  <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon-16x16.png?v=15">
-  <link rel="icon" type="image/png" sizes="512x512" href="assets/favicon.png?v=15">
-  <link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png?v=15">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32x32.png?v=17">
+  <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon-16x16.png?v=17">
+  <link rel="icon" type="image/png" sizes="512x512" href="assets/favicon.png?v=17">
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png?v=17">
 
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="echoNad3">
   <meta property="og:title" content="echoNad3">
   <meta property="og:description" content="I make stuff I want to use.">
   <meta property="og:url" content="https://echonad3.github.io/">
-  <meta property="og:image" content="https://echonad3.github.io/assets/social-preview.png?v=15">
+  <meta property="og:image" content="https://echonad3.github.io/assets/social-preview.png?v=17">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
   <meta property="og:image:type" content="image/png">
@@ -28,10 +28,10 @@
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="echoNad3">
   <meta name="twitter:description" content="I make stuff I want to use.">
-  <meta name="twitter:image" content="https://echonad3.github.io/assets/social-preview.png?v=15">
+  <meta name="twitter:image" content="https://echonad3.github.io/assets/social-preview.png?v=17">
   <meta name="twitter:image:alt" content="echoNad3 logo">
 
-  <link rel="stylesheet" href="assets/styles.css?v=15">
+  <link rel="stylesheet" href="assets/styles.css?v=17">
 </head>
 <body id="top">
   <a class="skip-link" href="#content">Skip to content</a>
@@ -45,87 +45,105 @@
     </div>
   </header>
 
-  <main id="content" class="shell">
-    <section class="intro" aria-labelledby="intro-title">
-      <p class="eyebrow">Welcome to the GitHub page of echoNad3</p>
-      <h1 id="intro-title">I make stuff I want to use.</h1>
+  <main id="content">
+    <section class="hero shell" aria-labelledby="hero-title">
+      <div class="hero-copy">
+        <h1 id="hero-title">I make stuff I want to use.</h1>
+        <p class="hero-lead">I need a tool. Everything I find is bloated, invasive, or locked behind a subscription.</p>
+        <p class="hero-statement">So I make my own.</p>
+        <a class="button button--primary" href="#projects">See projects <span aria-hidden="true">↓</span></a>
+      </div>
 
-      <div class="copy">
-        <p class="lead">Most of what I build starts the same way: <strong>I need a tool, I look for one</strong>, and everything I find is either full of ads, locked behind a subscription, collecting more data than it needs, or bloated with features nobody asked for.</p>
-        <p class="statement">So I make my own.</p>
-        <p>That has turned into fitness apps, VS Code extensions, YouTube summarizers, small utilities, automation tools, and a few video game projects.</p>
+      <aside class="principles-card" aria-labelledby="principles-title">
+        <h2 id="principles-title">What I aim for</h2>
+        <ul>
+          <li>Useful</li>
+          <li>Simple</li>
+          <li>Private where possible</li>
+          <li>No ads</li>
+          <li>No pointless accounts</li>
+          <li>No subscriptions for basic features</li>
+        </ul>
+      </aside>
+    </section>
+
+    <section id="projects" class="projects-section shell" aria-labelledby="projects-title">
+      <div class="section-heading">
+        <h2 id="projects-title">Projects</h2>
+        <p>Things I built because I wanted them to exist.</p>
+      </div>
+
+      <div class="project-grid">
+        <article class="project-card" aria-labelledby="fitness-title">
+          <div class="project-visual project-visual--fitness" aria-hidden="true">
+            <div class="fitness-device">
+              <div class="fitness-screen">
+                <div class="mock-app-title"><img src="assets/projects/fitness-hub-logo.svg" alt=""><span>Fitness Hub</span></div>
+                <div class="mock-date">Sunday · Workout B is next</div>
+                <div class="mock-fitness-primary">Start workout<small>Up next · Workout B</small></div>
+                <div class="mock-tile-grid">
+                  <div class="mock-tile">History<small>Recent workouts</small></div>
+                  <div class="mock-tile">Progress<small>Stats and exercises</small></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="project-content">
+            <p class="project-type">Fitness app</p>
+            <h3 id="fitness-title">Fitness Hub</h3>
+            <p>A private workout tracker for web, PWA, and Android.</p>
+            <div class="actions">
+              <a class="button button--primary" href="https://echonad3.github.io/fitness_hub/" target="_blank" rel="noopener noreferrer">Open app <span aria-hidden="true">↗</span></a>
+              <a class="button" href="https://github.com/echoNad3/fitness_hub" target="_blank" rel="noopener noreferrer">GitHub <span aria-hidden="true">↗</span></a>
+            </div>
+          </div>
+        </article>
+
+        <article class="project-card" aria-labelledby="summary-title">
+          <div class="project-visual project-visual--summary" aria-hidden="true">
+            <div class="summary-window">
+              <div class="window-bar"><i></i><i></i><i></i></div>
+              <div class="summary-ui">
+                <div class="summary-brand"><img src="assets/projects/no-bs-summary-logo.svg" alt=""><span>No BS Summary</span></div>
+                <div class="summary-label">YouTube link</div>
+                <div class="summary-form"><div class="summary-input">https://youtu.be/…</div><div class="summary-submit">Cut the BS</div></div>
+                <div class="summary-result"><span class="summary-verdict">SKIM</span><div class="summary-lines"><i></i><i></i><i></i></div></div>
+              </div>
+            </div>
+          </div>
+          <div class="project-content">
+            <p class="project-type">YouTube summarizer</p>
+            <h3 id="summary-title">No BS Summary</h3>
+            <p>A no-nonsense summarizer for web, Chrome, PWA, and Android.</p>
+            <div class="actions">
+              <a class="button button--primary" href="https://no-bs-summary.echonad3.workers.dev/" target="_blank" rel="noopener noreferrer">Web app <span aria-hidden="true">↗</span></a>
+              <a class="button" href="https://chromewebstore.google.com/detail/no-bs-summary/fnphiadakmbpimdclfohfpbbliejhnmc" target="_blank" rel="noopener noreferrer">Chrome <span aria-hidden="true">↗</span></a>
+              <a class="button button--quiet" href="https://github.com/echoNad3/no_bullshit_summary" target="_blank" rel="noopener noreferrer">GitHub <span aria-hidden="true">↗</span></a>
+            </div>
+          </div>
+        </article>
+
+        <article class="project-card project-card--theme" aria-labelledby="theme-title">
+          <div class="theme-preview">
+            <img src="assets/projects/echotheme-preview.png" alt="echoTheme applied to Visual Studio Code" width="2560" height="1400" loading="lazy">
+          </div>
+          <div class="project-content">
+            <p class="project-type">VS Code extension</p>
+            <h3 id="theme-title">echoTheme</h3>
+            <p>A custom dark theme for Visual Studio Code.</p>
+            <div class="actions">
+              <a class="button button--primary" href="https://marketplace.visualstudio.com/items?itemName=echoNad3.echonade3theme" target="_blank" rel="noopener noreferrer">Install <span aria-hidden="true">↗</span></a>
+              <a class="button" href="https://github.com/echoNad3/echoTheme" target="_blank" rel="noopener noreferrer">GitHub <span aria-hidden="true">↗</span></a>
+            </div>
+          </div>
+        </article>
       </div>
     </section>
 
-    <section class="section" aria-labelledby="projects-title">
-      <h2 id="projects-title">Projects</h2>
-
-      <div class="projects">
-        <article class="project">
-          <div class="project-copy">
-            <span class="project-name">echoTheme</span>
-            <span class="project-type">VS Code extension</span>
-          </div>
-          <div class="project-links">
-            <a class="project-link project-link--primary" href="https://marketplace.visualstudio.com/items?itemName=echoNad3.echonade3theme" target="_blank" rel="noopener noreferrer" aria-label="Install echoTheme from the Visual Studio Marketplace">Install ↗</a>
-            <a class="project-link" href="https://github.com/echoNad3/echoTheme" target="_blank" rel="noopener noreferrer" aria-label="View the echoTheme source code on GitHub">GitHub ↗</a>
-          </div>
-        </article>
-
-        <article class="project">
-          <div class="project-copy">
-            <span class="project-name">Fitness Hub</span>
-            <span class="project-type">Fitness app</span>
-          </div>
-          <div class="project-links">
-            <a class="project-link project-link--primary" href="https://echonad3.github.io/fitness_hub/" target="_blank" rel="noopener noreferrer" aria-label="Open the Fitness Hub website">Open app ↗</a>
-            <a class="project-link" href="https://github.com/echoNad3/fitness_hub" target="_blank" rel="noopener noreferrer" aria-label="View the Fitness Hub source code on GitHub">GitHub ↗</a>
-          </div>
-        </article>
-
-        <article class="project">
-          <div class="project-copy">
-            <span class="project-name">No BS Summary</span>
-            <span class="project-type">YouTube summarizer</span>
-          </div>
-          <div class="project-links">
-            <a class="project-link project-link--primary" href="https://no-bs-summary.echonad3.workers.dev/" target="_blank" rel="noopener noreferrer" aria-label="Open the No BS Summary website">Web app ↗</a>
-            <a class="project-link" href="https://chromewebstore.google.com/detail/no-bs-summary/fnphiadakmbpimdclfohfpbbliejhnmc" target="_blank" rel="noopener noreferrer" aria-label="Install No BS Summary from the Chrome Web Store">Chrome ↗</a>
-            <a class="project-link" href="https://github.com/echoNad3/no_bullshit_summary" target="_blank" rel="noopener noreferrer" aria-label="View the No BS Summary source code on GitHub">GitHub ↗</a>
-          </div>
-        </article>
-      </div>
-    </section>
-
-    <section class="section" aria-labelledby="philosophy-title">
-      <h2 id="philosophy-title">Why</h2>
-
-      <div class="copy">
-        <p>I’m tired of simple software being turned into a service.</p>
-        <p>You install something to do one basic job, and suddenly it wants an account, cloud access, analytics, notifications, a monthly payment, and permission to track half your life.</p>
-        <p>A lot of good software also gets worse over time because the company behind it needs more growth, more engagement, and more ways to squeeze money out of the same users.</p>
-        <p><strong>I don’t want any of that in the things I use.</strong></p>
-      </div>
-
-      <h3>What I aim for</h3>
-
-      <div class="principles" aria-label="Project principles">
-        <ul>
-          <li>useful</li>
-          <li>simple</li>
-          <li>private where possible</li>
-        </ul>
-        <ul>
-          <li>no ads</li>
-          <li>no pointless accounts</li>
-          <li>no subscriptions for basic features</li>
-        </ul>
-      </div>
-
-      <div class="copy closing-copy">
-        <p>Some projects are public. Some are unfinished. A lot of them are just things I built because I wanted them to exist.</p>
-        <p><strong>That’s pretty much it.</strong></p>
-      </div>
+    <section class="closing-section shell" aria-labelledby="closing-title">
+      <h2 id="closing-title">Why</h2>
+      <p>I’m tired of simple software being turned into a service.</p>
+      <strong>That’s pretty much it.</strong>
     </section>
   </main>
 
