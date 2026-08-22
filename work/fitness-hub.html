@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Fitness Hub case study — echoNad3</title>
+  <meta name="description" content="How echoNad3 designed and built Fitness Hub: an offline-first workout tracker for web, PWA, and Android.">
+  <meta name="robots" content="index, follow">
+  <meta name="theme-color" content="#34302d">
+  <link rel="canonical" href="https://echonad3.github.io/work/fitness-hub.html">
+  <link rel="icon" type="image/svg+xml" href="../assets/favicon.svg?v=14">
+  <link rel="icon" type="image/png" sizes="32x32" href="../assets/favicon-32x32.png?v=14">
+  <link rel="stylesheet" href="../assets/styles.css?v=14">
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="echoNad3">
+  <meta property="og:title" content="Fitness Hub case study">
+  <meta property="og:description" content="An offline-first workout tracker delivered across web, PWA, and Android.">
+  <meta property="og:url" content="https://echonad3.github.io/work/fitness-hub.html">
+  <meta property="og:image" content="https://echonad3.github.io/assets/social-preview.png?v=14">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="echoNad3 software developer portfolio">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Fitness Hub case study — echoNad3">
+  <meta name="twitter:description" content="An offline-first workout tracker delivered across web, PWA, and Android.">
+  <meta name="twitter:image" content="https://echonad3.github.io/assets/social-preview.png?v=14">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "Fitness Hub",
+    "url": "https://echonad3.github.io/fitness_hub/",
+    "applicationCategory": "HealthApplication",
+    "operatingSystem": "Web, Android",
+    "description": "An offline-first workout tracker for planning, logging, and reviewing progress.",
+    "codeRepository": "https://github.com/echoNad3/fitness_hub",
+    "author": { "@type": "Person", "name": "echoNad3", "url": "https://github.com/echoNad3" }
+  }
+  </script>
+</head>
+<body id="top">
+  <a class="skip-link" href="#content">Skip to content</a>
+
+  <header class="site-header">
+    <div class="header-inner shell">
+      <a class="brand" href="../" aria-label="echoNad3 home"><span class="brand-mark" aria-hidden="true">EN3</span><span class="brand-name">echoNad3</span></a>
+      <nav class="site-nav" aria-label="Primary navigation">
+        <a href="../#work">Work</a><a href="../#approach">Approach</a><a href="../#about">About</a><a class="nav-cta" href="../#contact">Let’s talk</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="content" class="case-main shell">
+    <section class="case-hero" aria-labelledby="case-title">
+      <div>
+        <p class="eyebrow"><span class="status-dot" aria-hidden="true"></span>Case study · Live product</p>
+        <h1 id="case-title">Fitness Hub</h1>
+        <p class="hero-lead">A phone-first workout tracker designed around fast logging, durable history, offline ownership, and a clear path from web app to native Android build.</p>
+        <div class="actions">
+          <a class="button button--primary" href="https://echonad3.github.io/fitness_hub/" target="_blank" rel="noopener noreferrer">Open product <span class="button-arrow" aria-hidden="true">↗</span></a>
+          <a class="button" href="https://github.com/echoNad3/fitness_hub" target="_blank" rel="noopener noreferrer">View source <span class="button-arrow" aria-hidden="true">↗</span></a>
+        </div>
+      </div>
+      <div class="case-logo"><img src="../assets/projects/fitness-hub-logo.svg" alt="Fitness Hub app icon"></div>
+    </section>
+
+    <dl class="case-overview">
+      <div><dt>Role</dt><dd>Product design and engineering</dd></div>
+      <div><dt>Platforms</dt><dd>Web, PWA, Android</dd></div>
+      <div><dt>Core stack</dt><dd>React, TypeScript, Capacitor</dd></div>
+      <div><dt>Status</dt><dd>Maintained and deployed</dd></div>
+    </dl>
+
+    <section class="case-section" aria-labelledby="problem-title">
+      <div><p class="section-label">The problem</p><h2 id="problem-title">Logging a workout should not become another subscription.</h2></div>
+      <div class="case-section-content">
+        <p>Fitness Hub began as a replacement for workout trackers that were slow to use, overloaded with features, or dependent on an account and cloud connection.</p>
+        <p>The product had to stay quick during an actual workout, preserve past sessions even when a program changed, work offline, and remain usable without creating an account.</p>
+      </div>
+    </section>
+
+    <section class="case-section" aria-labelledby="solution-title">
+      <div><p class="section-label">The product</p><h2 id="solution-title">One focused system for planning, logging, and reviewing progress.</h2></div>
+      <div class="case-section-content">
+        <p>Users can build one-to-seven-day programs, record successful or failed exercise attempts, carry weights forward, keep setup notes and rest times, and review filtered progress by exercise.</p>
+        <p>The same React application runs as a responsive website and installable PWA, while Capacitor packages it as an Android app with native haptics, notifications, backups, launch behavior, and update handling.</p>
+      </div>
+    </section>
+
+    <section class="case-section" aria-labelledby="engineering-title">
+      <div><p class="section-label">Engineering</p><h2 id="engineering-title">Decisions made for real use, not a demo.</h2></div>
+      <div class="case-section-content decision-grid">
+        <article class="decision-card"><h3>Offline-first state</h3><p>Core workout data lives locally so the app remains useful without connectivity or an account.</p></article>
+        <article class="decision-card"><h3>Historical integrity</h3><p>Completed workouts stay fixed even when the active program is edited or deleted.</p></article>
+        <article class="decision-card"><h3>Optional sync</h3><p>Supabase synchronization is additive rather than a requirement for using the product.</p></article>
+        <article class="decision-card"><h3>Recovery by design</h3><p>Destructive changes create protected recovery snapshots, alongside explicit import and export tools.</p></article>
+        <article class="decision-card"><h3>Cross-platform delivery</h3><p>Build configuration separates GitHub Pages paths from Capacitor’s native webview requirements.</p></article>
+        <article class="decision-card"><h3>Release confidence</h3><p>Unit tests, responsive browser tests, linting, brand checks, and security checks run before deployment.</p></article>
+      </div>
+    </section>
+
+    <section class="case-section" aria-labelledby="proof-title">
+      <div><p class="section-label">What it demonstrates</p><h2 id="proof-title">Full ownership from interaction to release.</h2></div>
+      <div class="case-section-content">
+        <p>This project demonstrates product scoping, responsive interface design, domain modeling, offline persistence, cloud synchronization, defensive data handling, native Android integration, automated testing, and continuous delivery.</p>
+        <ul class="tag-list" aria-label="Fitness Hub technologies"><li>React</li><li>TypeScript</li><li>Vite</li><li>Capacitor</li><li>Supabase</li><li>Playwright</li><li>GitHub Actions</li></ul>
+      </div>
+    </section>
+
+    <section class="case-cta" aria-label="Fitness Hub links">
+      <div><h2>Try the real product.</h2><p>The web app works immediately; Android installation is available inside the product.</p></div>
+      <div class="actions"><a class="button button--primary" href="https://echonad3.github.io/fitness_hub/" target="_blank" rel="noopener noreferrer">Open Fitness Hub <span class="button-arrow" aria-hidden="true">↗</span></a><a class="button" href="../#work">Back to portfolio</a></div>
+    </section>
+  </main>
+
+  <footer class="site-footer"><div class="footer-inner shell"><span>© 2026 echoNad3</span><div class="footer-links"><a href="../">Portfolio</a><a href="https://github.com/echoNad3/fitness_hub" target="_blank" rel="noopener noreferrer">Source ↗</a></div></div></footer>
+</body>
+</html>
